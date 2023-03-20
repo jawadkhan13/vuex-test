@@ -90,7 +90,7 @@ export default {
         name: this.product ? this.product.name : '',
         description: this.product ? this.product.description : '',
         price: this.product ? this.product.price : '',
-        categoryId: this.product ? this.product.categoryId : ''
+        categoryId: this.product ? this.product.categoryIds : ''
       },
       errors: {}
     }
