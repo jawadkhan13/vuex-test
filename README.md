@@ -1,5 +1,4 @@
 
-Text here
 ## Project Setup
 
 ```sh
