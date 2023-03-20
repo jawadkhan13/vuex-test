@@ -114,7 +114,7 @@ export default {
         name: this.formData.name,
         description: this.formData.description,
         price: this.formData.price,
-        categoryId: this.formData.categoryId
+        categoryId: this.formData.categoryIds
       }
       if (this.validateForm()) {
         if (this.product.id) {
