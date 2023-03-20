@@ -1,0 +1,55 @@
+{
+  "users": [
+    {
+      "id": "5af1407d-d8fc-4eb8-8d3d-5ef8a7fe059f",
+      "name": "jawad",
+      "password": "123"
+    },
+    {
+      "id": "04a767ac-9aa2-45b7-9cc8-559ecbe98b59",
+      "name": "new",
+      "password": "123"
+    }
+  ],
+  "category": [
+    {
+      "id": "c65c8fa4-851f-4158-be1a-9b4f5b0836f4",
+      "name": "SUV"
+    },
+    {
+      "id": "0b0e7e4a-f122-4a1b-8580-c566717f0ad5",
+      "name": "Sedan"
+    },
+    {
+      "name": "Camper",
+      "id": "b4VQMRU"
+    },
+    {
+      "name": "Muscle-Car",
+      "id": "Gh-02l5"
+    }
+  ],
+  "products": [
+    {
+      "id": "lKzvE7s",
+      "name": "Audi",
+      "description": "Model 2018",
+      "price": 25000,
+      "categoryIds": "c65c8fa4-851f-4158-be1a-9b4f5b0836f4"
+    },
+    {
+      "name": "Jaguar",
+      "description": "Model 2020",
+      "price": 29000,
+      "id": "WWzTBf3",
+      "categoryIds": "c65c8fa4-851f-4158-be1a-9b4f5b0836f4"
+    },
+    {
+      "name": "Ford",
+      "description": "Mustang 2010",
+      "price": 12000,
+      "id": "Gr4Ci0y",
+      "categoryIds": "Gh-02l5"
+    }
+  ]
+}
