@@ -81,9 +81,7 @@ export default {
       price: { required },
       categoryId: { required }
     }
-
     const v$ = useVuelidate(rules)
-
     return { v$ }
   },
   data() {
@@ -92,7 +90,7 @@ export default {
         name: this.product ? this.product.name : '',
         description: this.product ? this.product.description : '',
         price: this.product ? this.product.price : '',
-        categoryId: this.product ? this.product.categoryIds : ''
+        categoryId: this.product ? this.product.categoryId : ''
       },
       errors: {}
     }
@@ -126,19 +124,16 @@ export default {
           console.log('Add Here')
           this.$store.dispatch('createProduct', formData)
         }
-
         this.clearForm()
       }
     },
     validateForm() {
       // reset errors object
       this.errors = {}
-
       // validate name
       if (!this.formData.name.trim()) {
         this.errors.name = 'Name is required.'
       }
-
       // validate description
       if (!this.formData.description.trim()) {
         this.errors.description = 'Password is required.'
@@ -151,7 +146,6 @@ export default {
       if (!this.formData.categoryId.trim()) {
         this.errors.categoryId = 'Category is required.'
       }
-
       // return true if there are no errors
       return Object.keys(this.errors).length === 0
     },
