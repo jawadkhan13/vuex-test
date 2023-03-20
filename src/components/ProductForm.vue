@@ -46,8 +46,8 @@
         <select
           id="category"
           class="form-select"
-          :class="{ 'is-invalid': errors.categoryIds }"
-          v-model="formData.categoryIds"
+          :class="{ 'is-invalid': errors.categoryId }"
+          v-model="formData.categoryId"
         >
           <option value="" selected="true">Select a category</option>
           <option v-for="category in categories" :value="category.id" :key="category.id">
@@ -92,7 +92,7 @@ export default {
         name: this.product ? this.product.name : '',
         description: this.product ? this.product.description : '',
         price: this.product ? this.product.price : '',
-        categoryIds: this.product ? this.product.category : ''
+        categoryId: this.product ? this.product.categoryIds : ''
       },
       errors: {}
     }
@@ -116,7 +116,7 @@ export default {
         name: this.formData.name,
         description: this.formData.description,
         price: this.formData.price,
-        categoryIds: this.formData.categoryIds
+        categoryId: this.formData.categoryId
       }
       if (this.validateForm()) {
         if (this.product.id) {
@@ -147,9 +147,9 @@ export default {
       if (!this.formData.price) {
         this.errors.price = 'Price is required.'
       }
-      // validate category
-      if (!this.formData.categoryIds.trim()) {
-        this.errors.categoryIds = 'Category is required.'
+      //validate category
+      if (!this.formData.categoryId.trim()) {
+        this.errors.categoryId = 'Category is required.'
       }
 
       // return true if there are no errors
