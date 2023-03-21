@@ -7,6 +7,7 @@
         <tr>
           <th scope="col">Product Name</th>
           <th scope="col">Product Description</th>
+          <th scope="col">Category</th>
           <th scope="col">Product Price</th>
           <th scope="col">Actions</th>
         </tr>
