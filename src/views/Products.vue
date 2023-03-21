@@ -15,7 +15,7 @@
         <tr v-for="product in products" :key="product.id">
           <product-item
             :product="product"
-            :categories="categories"
+            :categories="categories.find((category) => category.id === product.categoryId)"
             @edit-product="editProduct"
             @delete-product="deleteProduct"
           />
