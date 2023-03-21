@@ -16,18 +16,18 @@
           <th scope="col" class="text-center">Product Name</th>
           <th scope="col" class="text-center">Product Description</th>
           <th scope="col" class="text-center">Product Price</th>
-          <th></th>
+          <th scope="col" class="text-center">Actions</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="product in products" :key="product.id">
-          <product-item
-            :product="product"
-            :categories="categories"
-            @edit-product="editProduct"
-            @delete-product="deleteProduct"
-          />
-        </tr>
+        <product-item
+          v-for="product in products"
+          :key="product.id"
+          :product="product"
+          :categories="categories"
+          @edit-product="editProduct"
+          @delete-product="deleteProduct"
+        />
       </tbody>
     </DataTable>
   </div>
@@ -81,6 +81,12 @@ export default {
       this.$router.push({
         name: 'SignIn'
       })
+    },
+    edit() {
+      this.$emit('edit-product', this.product)
+    },
+    deleteProduct() {
+      this.$emit('delete-product', this.product)
     }
   }
 }

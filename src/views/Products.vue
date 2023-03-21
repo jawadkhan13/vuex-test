@@ -7,6 +7,7 @@
         <tr>
           <th scope="col">Product Name</th>
           <th scope="col">Product Description</th>
+          <th scope="col">Category</th>
           <th scope="col">Product Price</th>
           <th scope="col">Actions</th>
         </tr>
@@ -15,7 +16,7 @@
         <tr v-for="product in products" :key="product.id">
           <product-item
             :product="product"
-            :categories="categories"
+            :categories="categories.find((category) => category.id === product.categoryId)"
             @edit-product="editProduct"
             @delete-product="deleteProduct"
           />
@@ -57,6 +58,12 @@ export default {
   },
   mounted() {
     this.$store.dispatch('fetchProducts')
+    this.$store.dispatch('fetchCats').catch((error) => {
+      this.$router.push({
+        name: 'ErrorDisplay',
+        params: { error: error }
+      })
+    })
   },
   created() {
     if (!this.$store.getters.isAuthenticated) {
@@ -64,12 +71,6 @@ export default {
         name: 'SignIn'
       })
     }
-    this.$store.dispatch('fetchCats').catch((error) => {
-      this.$router.push({
-        name: 'ErrorDisplay',
-        params: { error: error }
-      })
-    })
   },
   methods: {
     showProductForm() {

@@ -24,7 +24,7 @@ export default {
       })
     }
     console.log('hello')
-    this.$store.dispatch('fetchCats').catch(error => {
+    this.$store.dispatch('fetchCats').catch((error) => {
       this.$router.push({
         name: 'ErrorDisplay',
         params: { error: error }
@@ -33,9 +33,6 @@ export default {
   },
   computed: {
     categories() {
-      // let a = carStore.state.categories
-      console.log('Template:', this.$store.state.categories)
-      console.log('Template 1:', this.$store.state.category)
       return this.$store.state.categories
     }
   }

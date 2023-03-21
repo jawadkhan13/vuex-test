@@ -46,8 +46,8 @@
         <select
           id="category"
           class="form-select"
-          :class="{ 'is-invalid': errors.categoryIds }"
-          v-model="formData.categoryIds"
+          :class="{ 'is-invalid': errors.categoryId }"
+          v-model="formData.categoryId"
         >
           <option value="" selected="true">Select a category</option>
           <option v-for="category in categories" :value="category.id" :key="category.id">
@@ -81,9 +81,7 @@ export default {
       price: { required },
       categoryId: { required }
     }
-
     const v$ = useVuelidate(rules)
-
     return { v$ }
   },
   data() {
@@ -92,7 +90,7 @@ export default {
         name: this.product ? this.product.name : '',
         description: this.product ? this.product.description : '',
         price: this.product ? this.product.price : '',
-        categoryIds: this.product ? this.product.category : ''
+        categoryId: this.product ? this.product.categoryId : ''
       },
       errors: {}
     }
@@ -116,7 +114,7 @@ export default {
         name: this.formData.name,
         description: this.formData.description,
         price: this.formData.price,
-        categoryIds: this.formData.categoryIds
+        categoryId: this.formData.categoryId
       }
       if (this.validateForm()) {
         if (this.product.id) {
@@ -126,19 +124,16 @@ export default {
           console.log('Add Here')
           this.$store.dispatch('createProduct', formData)
         }
-
         this.clearForm()
       }
     },
     validateForm() {
       // reset errors object
       this.errors = {}
-
       // validate name
       if (!this.formData.name.trim()) {
         this.errors.name = 'Name is required.'
       }
-
       // validate description
       if (!this.formData.description.trim()) {
         this.errors.description = 'Password is required.'
@@ -147,11 +142,10 @@ export default {
       if (!this.formData.price) {
         this.errors.price = 'Price is required.'
       }
-      // validate category
-      if (!this.formData.categoryIds.trim()) {
-        this.errors.categoryIds = 'Category is required.'
+      //validate category
+      if (!this.formData.categoryId.trim()) {
+        this.errors.categoryId = 'Category is required.'
       }
-
       // return true if there are no errors
       return Object.keys(this.errors).length === 0
     },

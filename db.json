@@ -9,6 +9,41 @@
       "id": "04a767ac-9aa2-45b7-9cc8-559ecbe98b59",
       "name": "new",
       "password": "123"
+    },
+    {
+      "id": "74e96199-1eac-40b9-bd26-2016bc83560c",
+      "name": "Jawad",
+      "password": "123"
+    },
+    {
+      "id": "f4700239-fcb8-48d0-9468-cea7f22fd726",
+      "name": "jawad",
+      "password": "123"
+    },
+    {
+      "id": "fa4b6281-72de-4ded-88cf-1c55fa2a6cd9",
+      "name": "jawad",
+      "password": "123"
+    },
+    {
+      "id": "02ec0c88-4272-4c7f-8153-56e86453c559",
+      "name": "jawad",
+      "password": "123"
+    },
+    {
+      "id": "23266f81-96d4-49aa-9bff-9c93022eabba",
+      "name": "jawad",
+      "password": "123"
+    },
+    {
+      "id": "189be326-995c-4382-ae10-e4ca8932d561",
+      "name": "jawad",
+      "password": "123"
+    },
+    {
+      "id": "af495b54-0e01-4b0f-9658-6b1cf137a295",
+      "name": "jawad",
+      "password": "123"
     }
   ],
   "category": [
@@ -25,7 +60,7 @@
       "id": "b4VQMRU"
     },
     {
-      "name": "Muscle-Car",
+      "name": "Muscle - Car",
       "id": "Gh-02l5"
     }
   ],
@@ -35,21 +70,28 @@
       "name": "Audi",
       "description": "Model 2018",
       "price": 25000,
-      "categoryIds": "c65c8fa4-851f-4158-be1a-9b4f5b0836f4"
+      "categoryId": "c65c8fa4-851f-4158-be1a-9b4f5b0836f4"
     },
     {
       "name": "Jaguar",
       "description": "Model 2020",
       "price": 29000,
       "id": "WWzTBf3",
-      "categoryIds": "c65c8fa4-851f-4158-be1a-9b4f5b0836f4"
+      "categoryId": "0b0e7e4a-f122-4a1b-8580-c566717f0ad5"
     },
     {
       "name": "Ford",
       "description": "Mustang 2010",
       "price": 12000,
       "id": "Gr4Ci0y",
-      "categoryIds": "Gh-02l5"
+      "categoryId": "Gh-02l5"
+    },
+    {
+      "name": "Kia",
+      "description": "Surf",
+      "price": 11000,
+      "categoryId": "c65c8fa4-851f-4158-be1a-9b4f5b0836f4",
+      "id": "W3LtrQV"
     }
   ]
 }
