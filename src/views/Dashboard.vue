@@ -16,7 +16,6 @@
           <th scope="col" class="text-center">Product Name</th>
           <th scope="col" class="text-center">Product Description</th>
           <th scope="col" class="text-center">Product Price</th>
-          <th scope="col" class="text-center">Actions</th>
         </tr>
       </thead>
       <tbody>
