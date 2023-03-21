@@ -1,20 +1,7 @@
 <template>
-  <!-- <h3>{{ product.name }}</h3>
-
-    <p>{{ product.description }}</p>
-
-    <p>Price: ${{ product.price }}</p> -->
-
-  <!-- <p v-if="product.categories && product.categories.length > 0">
-      Categories:
-      {{ product.categories.map(category => category.name).join(', ') }}
-    </p> -->
-  <!-- 
-    <button @click="edit">Edit</button>
-    <button @click="deleteProduct">Delete</button> -->
-
   <td>{{ product.name }}</td>
   <td>{{ product.description }}</td>
+  <td>{{ categories.name }}</td>
   <td>${{ product.price }}</td>
   <td colspan="2">
     <button class="btn btn-info ms-3" @click="edit">Edit</button>
@@ -30,8 +17,8 @@ export default {
       default: () => ({})
     },
     categories: {
-      type: Array,
-      default: () => []
+      type: Object,
+      default: () => ({})
     }
   },
   methods: {
